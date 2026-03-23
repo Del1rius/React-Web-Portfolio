@@ -1,8 +1,8 @@
+// src/hooks/useTheme.js
 import { useEffect, useState } from "react";
 
 export default function useTheme() {
   const [theme, setTheme] = useState(() => {
-    // prefer saved theme; else OS preference
     const saved = localStorage.getItem("theme");
     if (saved) return saved;
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -11,11 +11,8 @@ export default function useTheme() {
 
   useEffect(() => {
     const root = document.documentElement; // <html>
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
+    if (theme === "dark") root.classList.add("dark");
+    else root.classList.remove("dark");
     localStorage.setItem("theme", theme);
   }, [theme]);
 

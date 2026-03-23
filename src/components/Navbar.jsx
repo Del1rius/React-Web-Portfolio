@@ -1,10 +1,12 @@
-import useTheme from "../hooks/useTheme.js";
+// src/components/Navbar.jsx
+import useTheme from "../hooks/useTheme";
 
 const links = [
   { label: "Home", id: "home" },
-  { label: "About Me", id: "about" },
+  { label: "About", id: "about" },
   { label: "Education", id: "education" },
-  { label: "Work Experience", id: "experience" },
+  { label: "Experience", id: "experience" },
+  { label: "Skills", id: "skills" },   // NEW
   { label: "Contact", id: "contact" },
 ];
 
@@ -17,18 +19,22 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-800">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/80 dark:bg-black/70 border-b border-slate-200 dark:border-slate-800">
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between">
-        <div className="font-semibold tracking-tight">
+        <button
+          onClick={() => scrollTo("home")}
+          className="font-semibold tracking-tight text-purple-700 dark:text-white hover:text-purple-600"
+        >
           Timothy Barry
-        </div>
+        </button>
+
         <div className="flex items-center gap-6">
           <ul className="hidden md:flex items-center gap-4">
             {links.map((l) => (
               <li key={l.id}>
                 <button
                   onClick={() => scrollTo(l.id)}
-                  className="text-sm hover:text-blue-600 dark:hover:text-blue-400"
+                  className="text-sm text-slate-700 hover:text-purple-600 dark:text-slate-200 dark:hover:text-white"
                 >
                   {l.label}
                 </button>
@@ -36,11 +42,11 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Theme toggle */}
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className="rounded-lg border border-slate-200 dark:border-slate-700 px-3 py-1 text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+            className="rounded-lg border border-slate-200 dark:border-slate-700 px-3 py-1 text-sm text-slate-700 hover:bg-purple-50 dark:text-slate-200 dark:hover:bg-white/10"
+            title={theme === "dark" ? "Switch to light" : "Switch to dark"}
           >
             {theme === "dark" ? "🌙" : "☀️"}
           </button>
