@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <Section id="home">
-      <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">
+      <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-purple-600 dark:text-white">
         Timothy Barry — Software Developer
       </h1>
 
@@ -24,18 +24,33 @@ export default function Home() {
       </p>
 
       <div className="flex items-center justify-center gap-3">
+        
         <button
           onClick={() => goTo("experience")}
-          className="rounded-lg bg-purple-600 text-white px-5 py-2 text-sm hover:bg-purple-700"
+          className="
+            px-5 py-2 text-sm rounded-lg
+            bg-purple-600 text-white border border-purple-600
+            hover:bg-white hover:text-purple-600 hover:border-purple-600
+            dark:bg-white dark:text-black dark:border-white
+            dark:hover:bg-purple-600 dark:hover:text-white
+          "
         >
           View Experience
         </button>
+        
         <button
           onClick={() => goTo("contact")}
-          className="rounded-lg border border-slate-300 dark:border-slate-700 px-5 py-2 text-sm hover:bg-purple-50 dark:hover:bg-white/10"
+          className="
+            px-5 py-2 text-sm rounded-lg
+            bg-purple-600 text-white border border-purple-600
+            hover:bg-white hover:text-purple-600 hover:border-purple-600
+            dark:bg-white dark:text-black dark:border-white
+            dark:hover:bg-purple-600 dark:hover:text-white
+          "
         >
           Contact
         </button>
+
       </div>
     </Section>
   );
