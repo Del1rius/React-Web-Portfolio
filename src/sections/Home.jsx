@@ -9,7 +9,10 @@ export default function Home() {
 
   return (
     <Section id="home">
-      <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-purple-600 dark:text-white">
+      <h1 className="
+        text-4xl sm:text-5xl font-extrabold mb-4
+        text-purple-600 dark:text-white
+        drop-shadow-[0_0_12px_rgba(168,85,247,0.8)]">
         Timothy Barry — Software Developer
       </h1>
 
@@ -37,7 +40,7 @@ export default function Home() {
         >
           View Experience
         </button>
-        
+
         <button
           onClick={() => goTo("contact")}
           className="

@@ -4,7 +4,7 @@ import Section from "../components/Section";
 export default function Contact() {
   return (
     <Section id="contact" title="Contact">
-      <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-6 max-w-xl mx-auto">
+      <div className="rounded-xl border border-purple-300 dark:border-slate-800 p-6 max-w-xl mx-auto">
         <p className="mb-4 text-slate-700 dark:text-slate-300">
           Want to collaborate or have a question? Reach out.
         </p>

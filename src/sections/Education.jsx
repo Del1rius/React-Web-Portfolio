@@ -19,7 +19,7 @@ export default function Education() {
     <Section id="education" title="Education">
       <ul className="space-y-5 max-w-xl mx-auto">
         {items.map((ed, i) => (
-          <li key={i} className="p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+          <li key={i} className="p-4 rounded-xl border border-purple-300 dark:border-slate-800">
             <div className="font-semibold">{ed.title}</div>
             <div className="text-sm text-slate-500 dark:text-slate-400">{ed.detail}</div>
             <div className="text-sm text-slate-500 dark:text-slate-400">{ed.period}</div>

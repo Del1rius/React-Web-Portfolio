@@ -34,8 +34,9 @@ export default function Navbar() {
               <li key={l.id}>
                 <button
                   onClick={() => scrollTo(l.id)}
-                  className="text-sm text-slate-700 hover:text-purple-600 dark:text-slate-200 dark:hover:text-white"
-                >
+                  
+                  className="relative text-sm font-medium text-purple-600 dark:text-slate-200 hover:text-purple-700 dark:hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-purple-600 dark:after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                  
                   {l.label}
                 </button>
               </li>

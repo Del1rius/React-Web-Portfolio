@@ -7,7 +7,7 @@ export default function Experience() {
       role: "Software Developer",
       company: "Loop Taxi",
       location: "Cape Town",
-      period: "05/2024 – Present",
+      period: "04/2024 – 04/2025",
       bullets: [
         "Designed and implemented new features to enhance company web systems and internal efficiency.",
         "Collaborated to troubleshoot issues, optimize performance, and ensure reliable operation.",
@@ -20,7 +20,7 @@ export default function Experience() {
       role: "Intern",
       company: "LC Studio",
       location: "Cape Town",
-      period: "10/2023 – 04/2024",
+      period: "10/2023 – 03/2024",
       bullets: [
         "Completed a structured program focused on JavaScript, Python, and full‑stack principles.",
         "Assisted front‑end development with HTML, CSS, and Vue.js on real client projects.",
@@ -35,7 +35,7 @@ export default function Experience() {
     <Section id="experience" title="Work Experience">
       <div className="space-y-6 max-w-3xl mx-auto">
         {items.map((job, i) => (
-          <div key={i} className="rounded-xl border border-slate-200 dark:border-slate-800 p-5 text-left">
+          <div key={i} className="rounded-xl border border-purple-300 dark:border-slate-800 p-5 text-left">
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
               <div className="font-semibold">
                 {job.role} • {job.company}
